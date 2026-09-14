@@ -1,0 +1,28 @@
+CREATE DATABASE biblioteca;
+
+CREATE TABLE comunas(
+    id_comuna INTEGER AUTO_INCREMENT PRIMARY KEY,
+    codigo_comuna CHAR(5) NOT NULL,
+    comuna VARCHAR(30) NOT NULL
+
+    CONSTRAINT pk_comunas PRIMARY KEY (id_comuna),
+) COMMENT = 'Listado de comunas de Chile de acuerdo a SUBDERE.';
+
+CREATE TABLE direcciones(
+    id_direccion INTEGER AUTO_INCREMENT PRIMARY KEY,
+    calle VARCHAR(50) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    departamento VARCHAR(10) NULL,
+
+    CONSTRAINT pk_direcciones PRIMARY KEY (id_direccion),
+    CONSTRAINT fk_direcciones_comunas FOREIGN KEY (id_comuna) REFERENCES comunas(id_comuna)
+) COMMENT = 'Tabla para guardar direcciones asociadas a biblioteca, usuarios, editoriales y lectores';
+
+CREATE TABLE bibliotecas(
+    id_biblioteca INTEGER AUTO_INCREMENT,
+    nombre_biblioteca VARCHAR(50) NOT NULL,
+    id_direccion INTEGER NOT NULL,
+
+    CONSTRAINT pk_bibliotecas PRIMARY KEY (id_biblioteca),
+    CONSTRAINT fk_bibliotecas_direcciones FOREIGN KEY (id_direccion) REFERENCES direcciones(id_direccion)
+) COMMENT = 'Tabla para guardar información de las bibliotecas.';
