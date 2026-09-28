@@ -1,0 +1,8 @@
+bcrypt==5.0.0
+mysql-connector-python==9.7.0
+mysqlclient==2.2.8
+peewee==4.5.1
+prettytable==3.17.0
+pwinput==1.0.3
+PyMySQL==1.2.3
+rut-chile==2.0.1
