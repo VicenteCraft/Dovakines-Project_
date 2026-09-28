@@ -1,3 +1,3 @@
-from datos import nombre_app, version_app
+from presentacion import menu_principal
 
 menu_principal()
