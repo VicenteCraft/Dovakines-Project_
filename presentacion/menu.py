@@ -1,6 +1,5 @@
 import sys
-
-from datos import nombre_app,version_app
+from datos import nombre_app,version_app,main_menu
 
 titulo = "Dovakinesapp y su fabulosa gestión de cursos ^^"
 
@@ -9,15 +8,16 @@ def menu_principal():
     print("=" * len(f"{nombre_app} - {version_app}"))
 
     while True:
-        for (clave,valor in menu_principal):
+        for clave,valor in main_menu.items():
             print(f"{clave}. {valor}")
-        opcion = input("Seleccione una opción: ")
+        
+        opcion_usuario = input("Seleccione una opción: ")
 
-        if opcion == "1":
+        if opcion_usuario == "1":
             print("Iniciando gestión de cursos...")
-        elif opcion == "2":
+        elif opcion_usuario == "2":
             print("Mostrando cursos disponibles...")
-        elif opcion == "3":
+        elif opcion_usuario == "3":
            print("Saliendo de la aplicación...")
         sys.exit()
     else:
