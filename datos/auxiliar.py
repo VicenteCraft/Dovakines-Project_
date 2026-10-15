@@ -1,4 +1,4 @@
-nombre_app = "Dovakinesapp"
+nombre_app = "Aplicación de Gestión de Cursos Online"
 version_app = "1.0.0"
 
 main_menu = {

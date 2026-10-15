@@ -1,1 +1,1 @@
-Programación orientado a objetos, hecho por: Benjamín Monsalve, Cristobal Vasquez y Vicente Galvez
+Programación orientado a objetos IEC-N2-C2 con el profesor Erick Bailey, trabajo hecho por: Benjamín Monsalve, Cristobal Vasquez y Vicente Galvez
