@@ -1,0 +1,5 @@
+# Requisitos de la aplicacion (solo lo que realmente se usa)
+mysql-connector-python==9.7.0   # libreria oficial de MySQL para Python
+python-decouple==3.8            # lectura segura del archivo .env
+prettytable==3.17.0             # tablas en pantalla
+pytest==9.0.3                   # pruebas automaticas
